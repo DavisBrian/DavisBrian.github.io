@@ -1,0 +1,32 @@
+---
+layout: post
+title: "May The Fourth Be with Us"
+author: "Brian Davis"
+date: "Monday, May 04, 2015"
+published: false
+status: process
+draft: false
+output: html_document
+---
+
+This is an introductory post testing that I have everything setup correctly and a sensible workflow.
+
+## Veiw of this blog
+
+I want to be able to write about the statistics and R related things that come up in the course of my work.  Mainly this blog will serve as an aid to my coworkers.  I typically have to make documents that are shorter than a formal white paper, but need to be more extensive than an email or a conversation.  Hopefully, this will bridge that gap.
+
+## Quick Demo
+
+Trying to insert a basic table and plot
+
+```{r}
+summary(cars)
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
