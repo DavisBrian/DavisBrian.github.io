@@ -36,7 +36,7 @@ summary(cars)
 ##  Max.   :25.0   Max.   :120.00
 {% endhighlight %}
  
-You can also embed plots, for example:
+See if I can also embed plots, for example:
  
 ![plot of chunk unnamed-chunk-2](/figures/unnamed-chunk-2-1.png) 
  

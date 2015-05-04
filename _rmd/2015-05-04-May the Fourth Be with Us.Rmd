@@ -23,7 +23,7 @@ Trying to insert a basic table and plot
 summary(cars)
 ```
 
-You can also embed plots, for example:
+See if I can also embed plots, for example:
 
 ```{r, echo=FALSE}
 plot(cars)
