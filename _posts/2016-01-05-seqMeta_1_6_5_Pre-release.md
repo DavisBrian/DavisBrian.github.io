@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "Preview seqMeta 1.6.5"
 author: "Brian Davis"
 date: "06 January, 2016"
