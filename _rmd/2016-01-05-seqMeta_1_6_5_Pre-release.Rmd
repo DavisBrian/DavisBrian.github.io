@@ -1,0 +1,20 @@
+---
+layout: post
+title: "Preview seqMeta 1.6.5"
+author: "Brian Davis"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+published: false
+status: process
+draft: false
+output: html_document
+---
+
+Happy New Year!!  My New Year's Resolution is post more here.  I'll be posting some comparisons of data structures and their effect on runtime and memory usage. I'd like feedback on these potential changes, but my preliminary look shows great promise in drastically reducing memory usage and runtime on real data sets.
+
+
+## seqMeta 1.6.5 Pre-Release
+
+I'll be submitting an update version of seqMeta to CRAN in a couple of weeks.  Please download and test the latest development version (seqMeta_1.6.0.9090.tar.gz) at https://github.com/DavisBrian/seqMeta.  Let me know of any issues you discover.  
+
+This release mainly fixes issues that arose from changes in the coxme package when the version is greater than 2.2-4. This affects prepScores, prepScroes2, and prepCox, and models where kinship is used. See NEWS for full details.
+
