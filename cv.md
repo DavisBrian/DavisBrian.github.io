@@ -3,7 +3,6 @@ layout: page
 title: Curriculum vitae
 permalink: /cv/
 ---
-
 ## Education
 MS Statistics, University of Virginia, Charlottesville, VA, 2009
 
