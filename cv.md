@@ -34,7 +34,7 @@ Performed statistical analysis, modeling, and bioinformatics in next-generation 
 
 * Developed a quality control and automated reporting system for next-generation sequence data.  This resulted in early detection of errors from the sequencing centers, and identification of outliers in the data.
 
-* Collaborated with investigators in grant development including statistical design of studies, sample size requirements, power calculations, and statistical methodology.  This included writing the bioinformatics and statistical methods portion of grant proposals.
+* Collaborated with investigators in NIH grant development including statistical design of studies, sample size requirements, power calculations, and statistical methodology.  This included writing the bioinformatics and statistical methods portion of NIH grant proposals.
 
 * Mentored statistical analysts and students in the application of statistical methodologies, interpretation of results and programming techniques.
 
