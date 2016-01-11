@@ -16,7 +16,8 @@ Strategies to design and analyze targeted sequencing data: The Cohorts for Heart
 Associations between lipoprotein(a) levels and cardiovascular outcomes in blacks and white subjects: the Atherosclerosis Risk in Communities (ARIC) Study. Circulation. 2012;125:241–249
 
 ## Professional Experience
-### UNIVERSITY OF TEXAS SCHOOL OF PUBLIC HEALTH, Houston, TX (2010 - Present)
+### UNIVERSITY OF TEXAS SCHOOL OF PUBLIC HEALTH, Houston, TX 
+####(2010 - Present)
 #### Senior Statistician
 Performed statistical analysis, modeling, and bioinformatics in next-generation DNA sequence data, epidemiology, and clinical trials as an adjunct to various faculty research groups.  Responsible for the design of statistically valid research studies, the application of advanced statistical methods for conducting analysis and preparing reports.
 
@@ -38,7 +39,8 @@ Performed statistical analysis, modeling, and bioinformatics in next-generation 
 
 * Served as statistical and computational representative on the cross-functional teams in the strategic planning, development and execution of new methodologies and algorithms.
 
-### UNIVERSITY OF VIRGINIA, Charlottesville, VA (2007 - 2009)
+### UNIVERSITY OF VIRGINIA, Charlottesville, VA 
+####(2007 - 2009)
 #### Instructor
 * Introduction to Statistical Analysis (STAT 212) - Introduction to the probability and statistical theory underlying the estimation of parameters and testing of statistical hypotheses, including those arising in the context of simple and multiple regression models. 
 
@@ -49,7 +51,8 @@ Performed statistical analysis, modeling, and bioinformatics in next-generation 
 
 * Sample Surveys (Stat 518) - Discussion of the main design and estimation techniques used in sample surveys: simple random sampling, stratification, cluster sampling, double sampling, post-stratification, ratio estimation. 
 
-### CAPITAL ONE FINANCIAL, Richmond, VA (Summer 2008)
+### CAPITAL ONE FINANCIAL, Richmond, VA 
+####(Summer 2008)
 #### Senior Statistician
 * Modeled historical credit card transaction data for real time fraud detection system. 
 * Aggregated data from several Oracle databases into SAS for data cleaning, model fitting, model selection, and forecasting.   
@@ -60,7 +63,8 @@ Performed statistical analysis, modeling, and bioinformatics in next-generation 
 
 * Wrote and modified SAS programs for the purpose of reporting, summarizing, analyzing, and validating financial data.
 
-### MEDICAL AUTOMATION SYSTEMS, Charlottesville, VA (2006 - 2008)
+### MEDICAL AUTOMATION SYSTEMS, Charlottesville, VA 
+####(2006 - 2008)
 #### Test Systems Software Engineer / Quality Analyst
 * Architected and implemented a new software quality tracking system to ensure compliance with FDA standards. 
 
@@ -74,7 +78,8 @@ Performed statistical analysis, modeling, and bioinformatics in next-generation 
 
 * Customized Mercury Software quality tracking system to ensure compliance with business processes and applicable government regulations.
 
-### UNIVERSITY OF VIRGINIA MEDICAL CENTER, Charlottesville, VA (2005 - 2006)
+### UNIVERSITY OF VIRGINIA MEDICAL CENTER, Charlottesville, VA 
+####(2005 - 2006)
 #### Database Administrator
 * Administered Microsoft SQL Servers 
 
@@ -84,7 +89,8 @@ Performed statistical analysis, modeling, and bioinformatics in next-generation 
 
 * Assisted in implementing a new patient monitoring and tracking system.
 
-### HEWLETT PACKARD, Houston, TX (1999 - 2005)
+### HEWLETT PACKARD, Houston, TX 
+####(1999 - 2005)
 #### Systems Software Engineer
 * Designed, developed and maintained over 40 test utilities and test tools for HP Proliant system ROM (BIOS) testing.
 
