@@ -4,19 +4,19 @@ title: Curriculum vitae
 permalink: /cv/
 ---
 
-UNIVERSITY OF VIRGINIA, Charlottesville, VA
-Master of Science, Statistics, May 2009
+## Education
+MS Statistics, University of Virginia, Charlottesville, VA, 2009
 
-TEXAS A&M UNIVERSITY, College Station, TX	          
-Bachelor of Science, Mechanical Engineering, August 1996
+BS Mechanical Engineering, Texas A&M University, College Station, TX, 1996
 
-### Publications
+## Publications
 Association of Low-Frequency and Rare Coding-Sequence Variants with Blood Lipids and Coronary Heart Disease in 56,000 Whites and Blacks, The American Journal of Human Genetics (2014)
 
-Strategies to design and analyze targeted sequencing data: The Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) targeted sequencing study. Circulation: Cardiovascular Genetics (2014)  7(3):335–343
+Strategies to design and analyze targeted sequencing data: The Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE) targeted sequencing study. Circulation: Cardiovascular Genetics (2014) 7(3):335–343
 
 Associations between lipoprotein(a) levels and cardiovascular outcomes in blacks and white subjects: the Atherosclerosis Risk in Communities (ARIC) Study. Circulation. 2012;125:241–249
 
+## Professional Experience
 ### UNIVERSITY OF TEXAS SCHOOL OF PUBLIC HEALTH, Houston, TX
 #### (2010 - Present)
 #### Senior Statistician
