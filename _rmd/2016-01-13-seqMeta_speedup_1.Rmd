@@ -1,0 +1,49 @@
+---
+layout: post
+title: "seqMeta Genotypes - Part I"
+author: "Brian Davis"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+published: false
+status: process
+draft: false
+output: html_document
+---
+
+#### *"I'm running your pipeline on our new data set but it's taking much longer than our previous data set.  Could you take a look at it?"* - local post doc
+
+
+At the same time in the CHARGE consortium we are making cloud based "apps" to allow analyst throughout the consortium to conduct analysis in a uniform manner and with consistent reporting of results.  The current "app" is based on a **very** old version of the same pipeline referred to by the post doc.
+
+
+This series of posts came from that simple enough sounding request, the similar issues we are encountering in the CHARGE consortium, and the rabbit hole I fell into that is optimization.
+
+
+## Background
+
+For those less fimilar with genomic data analysis in epidemiological studies there are three key data structures need run a seqMeta analysis.  
+
+* *genotype* matrix - a Subjects X SNPs dosage matrix of [0, 1, 2, NA], where 0 is the reference genotype, 1 is one allele is different, 2 both alleles are different, and NA is for missing data. 
+
+* *SNPInfo* - a data frame that maps SNPs to groups of SNPS to be analazed together, like genes.  
+
+* *phenotype* - adata frame similar to data you would send to `lm`.
+
+With these 3 data structures seqMeta aims to be an efficeint way to analyze problems of the type phenotype ~ covariates + SNP(s) over a large number of SNPS are groupings of SNPS.
+
+Our data sets have grown from being able to run all chromosomes combined together on a standard office PC to several gigabytes of genomic data for each chromosome.  With this growth in data so has the computational time and memory requirements needed to run a standard analysis.
+
+
+## Potential Solutions
+
+
+```{r}
+summary(cars)
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
