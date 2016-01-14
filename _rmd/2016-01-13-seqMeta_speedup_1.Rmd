@@ -12,7 +12,7 @@ output: html_document
 #### *"I'm running your pipeline on our new data set but it's taking much longer than our previous data set.  Could you take a look at it?"* - local post doc
 
 
-At the same time in the CHARGE consortium we are making cloud based "apps" to allow analyst throughout the consortium to conduct analysis in a uniform manner and with consistent reporting of results.  The current "app" is based on a **very** old version of the same pipeline referred to by the post doc.
+At the same time in the [CHARGE consortium](http://depts.washington.edu/chargeco/wiki/Main_Page) we are making cloud based "apps" on [DNAnexus](https://www.dnanexus.com/usecases-charge) to allow analyst throughout the consortium to conduct analysis in a uniform manner and with consistent reporting of results.  The current "app" is based on a **very** old version of the same pipeline referred to by the post doc.
 
 
 This series of posts came from that simple enough sounding request, the similar issues we are encountering in the CHARGE consortium, and the rabbit hole I fell into that is optimization.
@@ -20,30 +20,58 @@ This series of posts came from that simple enough sounding request, the similar 
 
 ## Background
 
-For those less fimilar with genomic data analysis in epidemiological studies there are three key data structures need run a seqMeta analysis.  
+For those less familiar with genomic data analysis in epidemiological studies there are three key data structures needed to run a typical seqMeta analysis.  
 
-* *genotype* matrix - a Subjects X SNPs dosage matrix of [0, 1, 2, NA], where 0 is the reference genotype, 1 is one allele is different, 2 both alleles are different, and NA is for missing data. 
+* *genotype* matrix - Subjects X SNPs dosage matrix of [0, 1, 2, NA], where 0 is the reference genotype, 1 is one allele is different, 2 both alleles are different, and NA is for missing data. 
 
-* *SNPInfo* - a data frame that maps SNPs to groups of SNPS to be analazed together, like genes.  
+* *SNPInfo* - data frame that maps SNPs to groups of SNPS to be analyzed together, like genes.  
 
-* *phenotype* - adata frame similar to data you would send to `lm`.
+* *phenotype* - data frame similar to data you would send to `lm`.
 
-With these 3 data structures seqMeta aims to be an efficeint way to analyze problems of the type phenotype ~ covariates + SNP(s) over a large number of SNPS are groupings of SNPS.
+With these 3 data structures seqMeta aims to be an efficient way to analyze problems of the type phenotype ~ covariates + SNP(s) over a large number of SNPS and/or groupings of SNPS.
 
-Our data sets have grown from being able to run all chromosomes combined together on a standard office PC to several gigabytes of genomic data for each chromosome.  With this growth in data so has the computational time and memory requirements needed to run a standard analysis.
 
+## Genotype Data
+
+While I can't share our actual data I'll share some summary statistics of 3 typical data sets.
+
+* Set 1 - a typical smaller data set. [ExomeChip](http://www.chargeconsortium.com/main/exomechip)
+* Set 2 - the previous data set referred to by the post doc [Freeze4]
+* Set 3 - the new data set referred to by the post doc [Freeze5]
+
+Number of snps, subjects, 0, 1, 2, NA table
 
 ## Potential Solutions
 
+These data sets have grown from being able to run all chromosomes combined together on a standard office PC to several gigabytes of genomic data for each chromosome.  With this growth in data so has the computational time and memory requirements needed to run a standard analysis.
 
-```{r}
-summary(cars)
-```
+While there are many different ways to deal with this ever growing data size.  I'll look at three commonly proposed solutions.
 
-You can also embed plots, for example:
+* Keep the traditional genotype matrices and either split them up in units smaller than a chromosome and/or increase the memory on computer systems used to run these analyzes.
 
-```{r, echo=FALSE}
-plot(cars)
-```
+* Store the traditional genotype matrix on disk in either in a database or in a binary file, reading in and analyzing a portion at a time. The CHARGE Consortium is looking at Genomic Data Structure (GDS) Format implemented in the SeqArray package.
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+* Store the genotypes in a sparse matrix format implemented in the Matrix package.
+
+## Traditional Genotype Matrix
+
+* Stored on disk as integer matrix in compressed RData format.
+* In-memory size = 4 bytes per genotype + overhead.
+* Imputing to mean changes the data type to numeric and in-memory size doubles.
+* Standard matrix operations apply.
+
+## GDS Genotype Matrix
+
+* Same as the traditional genotype matrix but stored on disk in Genomic Data Struture (GDS) Format.
+* File size highly dependent on input VCF.
+* Imputing to mean cannot be directly stored in GDS format.
+* In-memory size = traditional genotype matrix of the same data.
+
+## Sparse Genotype Matrix
+
+* Stored on disk as numeric sparse matrix in compressed RData format.
+* In-memory size = 8 bytes per non-zero genotype + overhead. 
+* Imputing to mean does not change data type and in-memory size stays the same or is reduced.
+* Most standard matrix operations apply
+
+In the next post I'll look at how these formats affect memory and computation times.
