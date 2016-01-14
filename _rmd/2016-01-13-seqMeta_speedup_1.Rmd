@@ -12,7 +12,7 @@ output: html_document
 #### *"I'm running your pipeline on our new data set but it's taking much longer than our previous data set.  Could you take a look at it?"* - local post doc
 
 
-At the same time in the [CHARGE consortium](http://depts.washington.edu/chargeco/wiki/Main_Page) we are developing cloud based "apps" on [DNAnexus](https://www.dnanexus.com/usecases-charge) to allow analyst throughout the consortium to conduct analysis in a uniform manner and with consistent reporting of results.  The current "app" is based on a **very** old version of the same pipeline referred to by the post doc.
+In the [CHARGE consortium](http://depts.washington.edu/chargeco/wiki/Main_Page) we are developing cloud based "apps" on [DNAnexus](https://www.dnanexus.com/usecases-charge) to allow analyst throughout the consortium to conduct analysis in a uniform manner and with consistent reporting of results.  The current "app" is based on a **very** old version of the same pipeline referred to by the post doc.
 
 
 This series of posts came from that simple enough sounding request for help, the similar issues we are encountering in the CHARGE consortium, and the rabbit hole I fell into that is optimization.
@@ -80,7 +80,7 @@ metrics %>%
 ```
 Note: Data Sizes in GB
 
-An analysis with the Exome Chip data takes roughly a coffee refill. Freeze4 analysis takes 3-4 hours. The post doc reported Freeze5 was "taking well over 24 hrs before I killed the job".  Over 24 hours clearly isn't realistic, the number of analyses typically run at a time would measure weeks.  
+An analysis with the Exome Chip data takes roughly a coffee refill. Freeze4 analysis takes 3-4 hours. The post doc reported Freeze5 was "taking well over 24 hrs before I killed the job".  Over 24 hours clearly is not realistic runtime.  Especially given the number of analyses typically run at a time would measure weeks, if not months.
 
 
 ## Potential Solutions
