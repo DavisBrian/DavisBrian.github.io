@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Big Data and seqMeta - Part I (Genotypes)"
+title: "BigR Data and seqMeta - Part I (Genotypes)"
 author: "Brian Davis"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 published: false
@@ -24,11 +24,11 @@ For those less familiar with genomic data analysis in epidemiological studies th
 
 * *genotype* matrix - Subjects X SNPs dosage matrix of [0, 1, 2, NA], representing the number of alleles which differ from the reference genotype.
 
-* *SNPInfo* - data frame that maps SNPs to groups of SNPS to be analyzed together (like genes).  
+* *SNPInfo* - data frame that maps SNPs to groups of SNPs to be analyzed together (like genes).  
 
 * *phenotype* - data frame with a response variable and covariates, similar to data used by `lm`.
 
-With these 3 data structures seqMeta aims to be an efficient way to analyze problems of the type `phenotype ~ covariates + SNP(s)` over a large number of SNPS and/or groupings of SNPS.
+With these 3 data structures seqMeta aims to be an efficient way to analyze problems of the type `phenotype ~ covariates + SNP(s)` over a large number of SNPs and/or groupings of SNPs.
 
 
 ## Genotype Data
@@ -61,14 +61,11 @@ metrics %>%
   group_by(dataset) %>% 
   mutate(loci = as.numeric(NSNPS*NSamples)) %>%
   summarise(SNPS = sum(NSNPS), 
-            Samples = unique(NSamples),
-            Pct0 = 100*sum(as.numeric(N_0))/sum(loci), 
-            Pct1 = 100*sum(as.numeric(N_1))/sum(loci), 
-            Pct2 = 100*sum(as.numeric(N_2))/sum(loci),
-            PctNA = 100*sum(as.numeric(N_NA))/sum(loci))  %>%
-  kable(col.names = c("Data Set", "SNPs", "Subjects", "Pct 0's", "Pct 1's", "Pct 2's", "Pct NA's"), 
-        padding = 0, digits=2, 
-        align = c("l", rep("c", 6)))
+            Subjects = unique(NSamples),
+            Pct_0s = 100*sum(as.numeric(N_0))/sum(loci), 
+            Pct_1s = 100*sum(as.numeric(N_1))/sum(loci), 
+            Pct_2s = 100*sum(as.numeric(N_2))/sum(loci),
+            Pct_NAs = 100*sum(as.numeric(N_NA))/sum(loci))
 ```
 
 ## The Problem
@@ -78,11 +75,10 @@ These data sets have grown from being able to run all chromosomes combined toget
 metrics %>% 
   filter(type == "genotype") %>% 
   group_by(dataset) %>% 
-  summarise(Isize = sum(imputed_size)/1024^3,
-            Lsize = max(imputed_size)/1024^3) %>%
-  kable(col.names = c("Data Set", "Total Size (GB)", "Largest Chromosome (GB)"), 
-        align = c("l", "c", "c"), digits=2)
+  summarise(Total_Size = sum(imputed_size)/1024^3,
+            Largest_Chromosome = max(imputed_size)/1024^3)
 ```
+Note: Data Sizes in GB
 
 An analysis with the Exome Chip data takes roughly a coffee refill. Freeze4 analysis takes 3-4 hours. The post doc reported Freeze5 was "taking well over 24 hrs before I killed the job".  Over 24 hours clearly isn't realistic, the number of analyses typically run at a time would measure weeks.  
 

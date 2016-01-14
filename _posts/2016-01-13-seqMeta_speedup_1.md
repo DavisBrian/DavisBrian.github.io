@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Big Data and seqMeta - Part I (Genotypes)"
+title: "BigR Data and seqMeta - Part I (Genotypes)"
 author: "Brian Davis"
 date: "14 January, 2016"
 published: true
@@ -24,11 +24,11 @@ For those less familiar with genomic data analysis in epidemiological studies th
  
 * *genotype* matrix - Subjects X SNPs dosage matrix of [0, 1, 2, NA], representing the number of alleles which differ from the reference genotype.
  
-* *SNPInfo* - data frame that maps SNPs to groups of SNPS to be analyzed together (like genes).  
+* *SNPInfo* - data frame that maps SNPs to groups of SNPs to be analyzed together (like genes).  
  
 * *phenotype* - data frame with a response variable and covariates, similar to data used by `lm`.
  
-With these 3 data structures seqMeta aims to be an efficient way to analyze problems of the type `phenotype ~ covariates + SNP(s)` over a large number of SNPS and/or groupings of SNPS.
+With these 3 data structures seqMeta aims to be an efficient way to analyze problems of the type `phenotype ~ covariates + SNP(s)` over a large number of SNPs and/or groupings of SNPs.
  
  
 ## Genotype Data
@@ -42,21 +42,30 @@ While I can't share our actual data I'll share some summary statistics of 3 typi
 
  
 
-|Data Set| SNPs  |Subjects|Pct 0's|Pct 1's|Pct 2's|Pct NA's|
-|:-------|:-----:|:------:|:-----:|:-----:|:-----:|:------:|
-|ExChip  |246672 |  3856  | 89.92 | 4.49  | 1.80  |  3.78  |
-|Freeze4 |1797859|  5718  | 97.75 | 0.67  | 0.44  |  1.14  |
-|Freeze5 |2041614|  7810  | 98.07 | 0.55  | 0.36  |  1.03  |
+{% highlight text %}
+## Source: local data frame [3 x 7]
+## 
+##   dataset    SNPS Subjects   Pct_0s    Pct_1s    Pct_2s  Pct_NAs
+##     (chr)   (int)    (int)    (dbl)     (dbl)     (dbl)    (dbl)
+## 1  ExChip  246672     3856 89.92482 4.4921589 1.8047717 3.778245
+## 2 Freeze4 1797859     5718 97.75061 0.6672284 0.4374634 1.144700
+## 3 Freeze5 2041614     7810 98.07099 0.5461701 0.3560468 1.026796
+{% endhighlight %}
  
 ## The Problem
 These data sets have grown from being able to run all chromosomes combined together on a standard office PC to several gigabytes of genomic data for each chromosome.  With this growth in data so has the memory requirements and computational time needed to run a standard analysis.
  
 
-|Data Set | Total Size (GB) | Largest Chromosome (GB) |
-|:--------|:---------------:|:-----------------------:|
-|ExChip   |      7.11       |          0.72           |
-|Freeze4  |      76.71      |          7.81           |
-|Freeze5  |     118.93      |          12.11          |
+{% highlight text %}
+## Source: local data frame [3 x 3]
+## 
+##   dataset Total_Size Largest_Chromosome
+##     (chr)      (dbl)              (dbl)
+## 1  ExChip   7.106281          0.7227982
+## 2 Freeze4  76.708101          7.8084067
+## 3 Freeze5 118.932684         12.1054069
+{% endhighlight %}
+Note: Data Sizes in GB
  
 An analysis with the Exome Chip data takes roughly a coffee refill. Freeze4 analysis takes 3-4 hours. The post doc reported Freeze5 was "taking well over 24 hrs before I killed the job".  Over 24 hours clearly isn't realistic, the number of analyses typically run at a time would measure weeks.  
  
