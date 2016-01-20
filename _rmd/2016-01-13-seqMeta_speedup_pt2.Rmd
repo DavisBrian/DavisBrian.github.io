@@ -1,0 +1,35 @@
+---
+layout: post
+title: '"BigR Data and seqMeta - Part II (Genotypes)"'
+author: "Brian Davis"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+published: false
+status: process
+draft: false
+output: html_document
+---
+
+Intro
+
+## Object Size in Memory
+
+
+## Minimum System Memory Requirements
+
+
+## Computational Performance
+
+
+## Genome-Wide MAF
+
+## Gene-by-Gene MAF
+
+## pseudo prepScores
+
+## Estimate of seqMeta Computational Time
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
