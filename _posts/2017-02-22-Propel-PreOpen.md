@@ -32,12 +32,32 @@ Now "Get off my lawn!"
  
 The first thing I noticed when I looked at the height of our participants is a couple people seemed to have filled out their profile a bit wrong.
  
-
-|           Name|      Division       | Height |
-|--------------:|:-------------------:|:------:|
-| Mike Boessling| Masters Men (40-44) | 0' 6"  |
-|   Hector Garza|   Individual Men    | 0' 6"  |
-|  Jason Fennell| Masters Men (35-39) | 0' 5"  |
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:right;"> Name </th>
+   <th style="text-align:center;"> Division </th>
+   <th style="text-align:center;"> Height </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:right;"> Mike Boessling </td>
+   <td style="text-align:center;"> Masters Men (40-44) </td>
+   <td style="text-align:center;"> 0' 6&quot; </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> Hector Garza </td>
+   <td style="text-align:center;"> Individual Men </td>
+   <td style="text-align:center;"> 0' 6&quot; </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> Jason Fennell </td>
+   <td style="text-align:center;"> Masters Men (35-39) </td>
+   <td style="text-align:center;"> 0' 5&quot; </td>
+  </tr>
+</tbody>
+</table>
  
 I assume they meant feet not inches when they were filling out their stats so I corrected them, although I'm pretty sure Jason is taller than 5 feet.
  

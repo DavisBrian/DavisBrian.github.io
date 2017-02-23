@@ -83,7 +83,7 @@ ht_tbl <- athletes %>%
   select(athlete_name, division, height) %>%
   mutate(height = height_as_text(height))
 
-knitr::kable(ht_tbl, col.names=c("Name", "Division", "Height"), align = c('r', 'c', 'c'))
+knitr::kable(ht_tbl, format = "html", col.names=c("Name", "Division", "Height"), align = c('r', 'c', 'c'))
 ```
 
 I assume they meant feet not inches when they were filling out their stats so I corrected them, although I'm pretty sure Jason is taller than 5 feet.
