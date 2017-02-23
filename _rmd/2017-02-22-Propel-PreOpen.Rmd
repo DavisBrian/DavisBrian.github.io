@@ -34,6 +34,11 @@ fix_benchmark <- function(x) {
   paste(toupper(substring(s, 1,1)), substring(s, 2),
         sep="", collapse=" ")
 }
+
+html_table_width <- function(kable_output, width){
+  width_html <- paste0(paste0('<col width="', width, '">'), collapse = "\n")
+  sub("<table>", paste0("<table>\n", width_html), kable_output)
+}
 ```
 
 How does a data scientist prepare for the [Crossfit
@@ -83,8 +88,10 @@ ht_tbl <- athletes %>%
   select(athlete_name, division, height) %>%
   mutate(height = height_as_text(height))
 
-knitr::kable(ht_tbl, format = "html", col.names=c("Name", "Division", "Height"), align = c('r', 'c', 'c'))
+knitr::kable(ht_tbl, format = "html", col.names=c("Name", "Division", "Height"), align = c('r', 'c', 'c')) %>%
+  html_table_width(c(200,200))
 ```
+
 
 I assume they meant feet not inches when they were filling out their stats so I corrected them, although I'm pretty sure Jason is taller than 5 feet.
 
@@ -126,8 +133,9 @@ bstats <- athletes %>%
   mutate(metric = sapply(metric, fix_benchmark)) %>%
   arrange(desc(cnt))
 
-knitr::kable(bstats, 
-             col.names=c("Benchmark Stat", "Count", "Missing"), align = c('l', 'c', 'c'))
+knitr::kable(bstats, format = "html", 
+             col.names=c("Benchmark Stat", "Count", "Missing"), align = c('l', 'c', 'c')) %>%
+  html_table_width(c(150,100))
 ```
 
 ### Final Thoughts

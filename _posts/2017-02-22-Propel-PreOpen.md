@@ -33,6 +33,8 @@ Now "Get off my lawn!"
 The first thing I noticed when I looked at the height of our participants is a couple people seemed to have filled out their profile a bit wrong.
  
 <table>
+<col width="200">
+<col width="200">
  <thead>
   <tr>
    <th style="text-align:right;"> Name </th>
@@ -59,6 +61,7 @@ The first thing I noticed when I looked at the height of our participants is a c
 </tbody>
 </table>
  
+ 
 I assume they meant feet not inches when they were filling out their stats so I corrected them, although I'm pretty sure Jason is taller than 5 feet.
  
 ![plot of chunk height_plot](/figures/height_plot-1.png)
@@ -69,21 +72,79 @@ How many of you guys are actually 5’11” but thought it wouldn’t hurt anybo
  
 Originally I was going to do the above plots for each benchmark WOD.  Unfortunately, we either haven't done them recently or we didn't feel the desire to fill in our scores.
  
-
-|Benchmark Stat | Count | Missing |
-|:--------------|:-----:|:-------:|
-|Deadlift       |  16   |   83    |
-|Back Squat     |  15   |   84    |
-|Clean And Jerk |  13   |   86    |
-|Snatch         |  13   |   86    |
-|Fran           |   8   |   91    |
-|Grace          |   8   |   91    |
-|Fight Gone Bad |   5   |   94    |
-|Max Pullups    |   5   |   94    |
-|Sprint 400m    |   5   |   94    |
-|Filthy 50      |   4   |   95    |
-|Helen          |   4   |   95    |
-|Run 5k         |   4   |   95    |
+<table>
+<col width="150">
+<col width="100">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Benchmark Stat </th>
+   <th style="text-align:center;"> Count </th>
+   <th style="text-align:center;"> Missing </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Deadlift </td>
+   <td style="text-align:center;"> 16 </td>
+   <td style="text-align:center;"> 83 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Back Squat </td>
+   <td style="text-align:center;"> 15 </td>
+   <td style="text-align:center;"> 84 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Clean And Jerk </td>
+   <td style="text-align:center;"> 13 </td>
+   <td style="text-align:center;"> 86 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Snatch </td>
+   <td style="text-align:center;"> 13 </td>
+   <td style="text-align:center;"> 86 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Fran </td>
+   <td style="text-align:center;"> 8 </td>
+   <td style="text-align:center;"> 91 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Grace </td>
+   <td style="text-align:center;"> 8 </td>
+   <td style="text-align:center;"> 91 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Fight Gone Bad </td>
+   <td style="text-align:center;"> 5 </td>
+   <td style="text-align:center;"> 94 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Max Pullups </td>
+   <td style="text-align:center;"> 5 </td>
+   <td style="text-align:center;"> 94 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Sprint 400m </td>
+   <td style="text-align:center;"> 5 </td>
+   <td style="text-align:center;"> 94 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Filthy 50 </td>
+   <td style="text-align:center;"> 4 </td>
+   <td style="text-align:center;"> 95 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Helen </td>
+   <td style="text-align:center;"> 4 </td>
+   <td style="text-align:center;"> 95 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Run 5k </td>
+   <td style="text-align:center;"> 4 </td>
+   <td style="text-align:center;"> 95 </td>
+  </tr>
+</tbody>
+</table>
  
 ### Final Thoughts
  
