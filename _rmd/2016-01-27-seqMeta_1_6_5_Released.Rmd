@@ -3,7 +3,7 @@ layout: post
 title: "seqMeta 1.6.5 Released"
 author: "Brian Davis"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-published: false
+published: true
 status: process
 draft: false
 output: html_document

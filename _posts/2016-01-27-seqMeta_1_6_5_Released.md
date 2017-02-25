@@ -2,7 +2,7 @@
 layout: post
 title: "seqMeta 1.6.5 Released"
 author: "Brian Davis"
-date: "27 January, 2016"
+date: "25 February, 2017"
 published: true
 status: publish
 draft: false

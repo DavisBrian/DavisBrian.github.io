@@ -3,7 +3,7 @@ layout: post
 title: "May The Fourth Be with Us"
 author: "Brian Davis"
 date: "Monday, May 04, 2015"
-published: false
+published: true
 status: process
 draft: false
 output: html_document
