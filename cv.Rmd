@@ -2,6 +2,9 @@
 title: "CV"
 permalink: /CV/
 layout: page
+output: 
+  html_document: 
+    keep_md: yes
 ---
 
 UNIVERSITY OF VIRGINIA, Charlottesville, VA
