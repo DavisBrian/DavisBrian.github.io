@@ -1,4 +1,3 @@
-# CV
 
 UNIVERSITY OF VIRGINIA, Charlottesville, VA
 Master of Science, Statistics, May 2009
