@@ -1,7 +1,7 @@
 ---
 title: "\'Twas the night before the Open"
 author: "Brian Davis"
-date: "25 February, 2017"
+date: "23 February, 2017"
 published: true
 status: publish
 draft: false

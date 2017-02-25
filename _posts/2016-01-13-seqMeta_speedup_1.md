@@ -2,7 +2,7 @@
 layout: post
 title: "BigR Data and seqMeta - Part I (Genotypes)"
 author: "Brian Davis"
-date: "25 February, 2017"
+date: "14 January, 2016"
 published: true
 status: publish
 draft: false
@@ -40,48 +40,31 @@ While I can't share our actual data I'll share some summary statistics of 3 typi
 * [Freeze5]   - the *new* data set referred to by the post doc 
  
 
-{% highlight text %}
-## Warning in gzfile(file, "rb"): cannot open compressed file 'C:/Projects/
-## GenotypeComparison/output/run1/metrics.rds', probable reason 'No such file
-## or directory'
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Error in gzfile(file, "rb"): cannot open the connection
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Warning in gzfile(file, "rb"): cannot open compressed file 'C:/Projects/
-## GenotypeComparison/output/run0/genes.rds', probable reason 'No such file or
-## directory'
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Error in gzfile(file, "rb"): cannot open the connection
-{% endhighlight %}
  
 
-|dataset |    SNPS| Subjects|   Pct_0s|    Pct_1s|    Pct_2s|  Pct_NAs|
-|:-------|-------:|--------:|--------:|---------:|---------:|--------:|
-|ExChip  |  246672|     3856| 89.92482| 4.4921589| 1.8047717| 3.778245|
-|Freeze4 | 1797859|     5718| 97.75061| 0.6672284| 0.4374634| 1.144700|
-|Freeze5 | 2041614|     7810| 98.07099| 0.5461701| 0.3560468| 1.026796|
+{% highlight text %}
+## Source: local data frame [3 x 7]
+## 
+##   dataset    SNPS Subjects   Pct_0s    Pct_1s    Pct_2s  Pct_NAs
+##     (chr)   (int)    (int)    (dbl)     (dbl)     (dbl)    (dbl)
+## 1  ExChip  246672     3856 89.92482 4.4921589 1.8047717 3.778245
+## 2 Freeze4 1797859     5718 97.75061 0.6672284 0.4374634 1.144700
+## 3 Freeze5 2041614     7810 98.07099 0.5461701 0.3560468 1.026796
+{% endhighlight %}
  
 ## The Problem
 These data sets have grown from being able to run all chromosomes combined together on a standard office PC to several gigabytes of genomic data for each chromosome.  With this growth in data so has the memory requirements and computational time needed to run a standard analysis.
  
 
-|dataset | Total_Size| Largest_Chromosome|
-|:-------|----------:|------------------:|
-|ExChip  |   7.106281|          0.7227982|
-|Freeze4 |  76.708101|          7.8084067|
-|Freeze5 | 118.932684|         12.1054069|
+{% highlight text %}
+## Source: local data frame [3 x 3]
+## 
+##   dataset Total_Size Largest_Chromosome
+##     (chr)      (dbl)              (dbl)
+## 1  ExChip   7.106281          0.7227982
+## 2 Freeze4  76.708101          7.8084067
+## 3 Freeze5 118.932684         12.1054069
+{% endhighlight %}
 Note: Data Sizes in GB
  
 An analysis with the Exome Chip data takes roughly a coffee refill. Freeze4 analysis takes 3-4 hours. The post doc reported Freeze5 was "taking well over 24 hrs before I killed the job".  Over 24 hours clearly is not realistic runtime.  Especially given the number of analyses typically run at a time would measure weeks, if not months.
