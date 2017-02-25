@@ -11,3 +11,12 @@ To create a new post
 - run `rmd2md()`
 - commit
 - push
+
+
+To Update the CV
+----------------
+- update cv.Rmd
+- Knit to html (via RStudio)
+- commit
+- push
+- check it worked
