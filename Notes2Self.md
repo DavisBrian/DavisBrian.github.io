@@ -1,5 +1,10 @@
 #Notes to self:
 
+Update this:
+Need to remove dependence on rmd2md.  RStudio can keep the html (see cv.rmd)
+Then the prosedure would be to knit html, move the md to the _md dir, then delete the html
+(or .gitignore *.html)
+
 
 To create a new post
 --------------------
@@ -11,3 +16,5 @@ To create a new post
 - run `rmd2md()`
 - commit
 - push
+
+
